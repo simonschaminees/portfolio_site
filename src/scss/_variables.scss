@@ -3,10 +3,6 @@ $backgroundPrimary: #f5f5f5;
 
 .lichtgrijs { background-color: $backgroundPrimary};
 
-.navbar {
-  background-color: $backgroundPrimary;
-}
-
 .mainTitle {
   font-size: 24px;
   font-weight: 500;
@@ -18,4 +14,11 @@ $backgroundPrimary: #f5f5f5;
   font-size: 70px;
   color: #000000;
   line-height: 1.2;
+}
+
+.card-title {
+  font-size: 40px;
+  color: #075450;
+  line-height: 1.2;
+
 }
