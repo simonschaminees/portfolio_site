@@ -19,28 +19,49 @@
         <img alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
       </b-col>
     </b-row>
-    <b-row>
-      <b-col offset-lg="1">
-        <b-card>
-          <b-card-title>
-            Adipiscing
-          </b-card-title>
-          <b-card-text>
-            Etiam convallis elementum sapien, a aliquam turpis aliquam vitae. Praesent  nisl sollicitudin felis vel mi facilisis posuere. Nulla ultrices facilisis justo, non varius semper vel. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-          </b-card-text>
-        </b-card>
-        
-      </b-col>
-    </b-row>
+
+
+
+  <cards/>
+
+
+  <b-row>
+    <b-col cols="10" offset-lg="1">
+      <h2 class="headers">Portfolio</h2>
+    </b-col>
+    <b-col cols="5" offset-lg="1">
+      <div class="square">
+      </div>
+      <div class="square mt-4">
+      </div>
+    </b-col>
+        <b-col cols="5">
+      <div class="square square_top">
+      </div>
+      <div class="square mt-4">
+      </div>
+    </b-col>
+  </b-row>
+
+  <b-row class="footer mt-4">
+    <b-col cols="10" offset-lg="1" class="mt-4 mb-4">
+      <h2 class="footer_header">Footer</h2>
+    </b-col>
+
+  </b-row>
+
+
   </b-container>
 </template>
 
 <script>
 import navigation from "../components/Navigation.vue";
+import cards from "../components/Card.vue"
 export default {
   name: "About",
   components: {
-    navigation
+    navigation,
+    cards
   }
 };
 </script>
