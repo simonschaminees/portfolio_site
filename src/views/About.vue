@@ -16,7 +16,7 @@
         </p>
       </b-col>
       <b-col cols="5">
-        <img alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
+        <img  alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
       </b-col>
     </b-row>
 
