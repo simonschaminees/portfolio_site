@@ -1,7 +1,9 @@
 <template>
   <b-navbar>
     <b-navbar-brand>
+          <router-link to="/">
        <img class="mt-4 mb-4" alt="Logo Simon" src="../assets/images/logo-simon.svg">
+       </router-link>
     </b-navbar-brand>
 
       <b-navbar-nav class="ml-auto">

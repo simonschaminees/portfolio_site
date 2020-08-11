@@ -58,7 +58,7 @@
 import navigation from "../components/Navigation.vue";
 import cards from "../components/Card.vue"
 export default {
-  name: "About",
+  name: "Home",
   components: {
     navigation,
     cards
