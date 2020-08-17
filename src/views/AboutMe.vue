@@ -19,9 +19,9 @@
     </b-row>
 
     <b-row>
-      <b-col offset-lg="1">
+            <b-col cols="5" offset-lg="1">
         <carousel />
-      </b-col>
+            </b-col>
     </b-row>
   </b-container>
 </template>
