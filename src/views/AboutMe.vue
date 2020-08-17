@@ -5,21 +5,36 @@
         <navigation />
       </b-col>
     </b-row>
-  <div class="home">
-    <h1>THis is the about page</h1>
-        <img  alt="Simon" src="https://i.kym-cdn.com/photos/images/newsfeed/001/176/251/4d7.png" />
 
-  </div>
+    <b-row class="black">
+      <b-col cols="5" offset-lg="1">
+        <h1 class="mainTitle">Aliquam nec </h1>
+        <p class="payOff white-font">
+          De verlosser,
+          De oppergeneraal
+          De redder van dx2
+          De wcm goeroe, Eerlijkheid boven alles.
+        </p>
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col offset-lg="1">
+        <carousel />
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script>
 import navigation from "../components/Navigation.vue";
+import carousel from "../components/Carousel.vue";
 
 export default {
   name: 'AboutMe',
     components: {
-    navigation
+    navigation,
+    carousel
   }
 }
 </script>
