@@ -7,12 +7,7 @@
     </b-row>
     <b-row class="lichtgrijs">
       <b-col cols="5" offset-lg="1">
-        <h1 class="mainTitle">Welkom</h1>
-        <p class="payOff">
-          De verlosser,
-          De oppergeneraal
-          De redder van dx2
-          De wcm goeroe, Eerlijkheid boven alles.
+        <p v-html="posts[0].content.rendered" class="payOff">
         </p>
         <b-button class="primary-button">Mijn werk</b-button>
       </b-col>
@@ -66,12 +61,23 @@
 
 <script>
 import navigation from "../components/Navigation.vue";
-import cards from "../components/Card.vue"
+import cards from "../components/Card.vue";
+import {mapState} from "vuex";
+
+
 export default {
   name: "Home",
   components: {
     navigation,
     cards
+  },
+  mounted() {
+    this.$store.dispatch('getWordpressPost')
+  },
+  computed: {
+    ...mapState([
+      'posts'
+    ])
   }
 };
 </script>
