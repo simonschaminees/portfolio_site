@@ -7,15 +7,17 @@
     </b-row>
     <b-row class="lichtgrijs">
       <b-col cols="5" offset-lg="1">
-        <p v-html="posts[0].content.rendered" class="payOff">
+        <p v-html="posts[1].content.rendered" class="payOff">
         </p>
         <b-button class="primary-button">Mijn werk</b-button>
       </b-col>
       <b-col cols="5">
         <img class="banner-image" alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
-      </b-col>
+      </b-col> 
     </b-row>
+
     <cards />
+
 
     <b-row>
       <b-col cols="10" offset-lg="1">
@@ -60,10 +62,11 @@
 </template>
 
 <script>
+
+
 import navigation from "../components/Navigation.vue";
 import cards from "../components/Card.vue";
 import {mapState} from "vuex";
-
 
 export default {
   name: "Home",
@@ -71,14 +74,20 @@ export default {
     navigation,
     cards
   },
-  mounted() {
-    this.$store.dispatch('getWordpressPost')
+  async created() {
+    try {
+    this.$store.dispatch('getWordpressPost');
+    this.$store.dispatch('getWPcards');
+    } catch(error){
+      console.log(error)
+    }
   },
   computed: {
     ...mapState([
-      'posts'
-    ])
-  }
+      'posts',
+      'WPcards'
+    ]),
+  },
 };
 </script>
 
