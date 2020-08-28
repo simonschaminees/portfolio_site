@@ -11,11 +11,8 @@
           </b-card-text>
           </b-col>  
 </b-row>  
-
-
-
-
 </b-container>   
+
 </template>
 
 <script>

@@ -7,7 +7,7 @@
     </b-row>
     <b-row class="lichtgrijs">
       <b-col cols="5" offset-lg="1">
-       
+        <h1 v-html="posts[0].content.rendered"></h1>
         <b-button class="primary-button">Mijn werk</b-button>
       </b-col>
       <b-col cols="5">
@@ -62,9 +62,10 @@
 
 <script>
 
-
 import navigation from "../components/Navigation.vue";
 import cards from "../components/Card.vue";
+import { mapState} from 'vuex'
+
 
 export default {
   name: "Home",
@@ -72,6 +73,12 @@ export default {
     navigation,
     cards
   },
+      computed : {
+      ...mapState('posts', ['posts'])
+    },
+      created() {
+      this.$store.dispatch('posts/loadPosts')
+    }
 };
 </script>
 
