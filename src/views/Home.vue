@@ -7,8 +7,7 @@
     </b-row>
     <b-row class="lichtgrijs">
       <b-col cols="5" offset-lg="1">
-        <p v-html="posts[1].content.rendered" class="payOff">
-        </p>
+       
         <b-button class="primary-button">Mijn werk</b-button>
       </b-col>
       <b-col cols="5">
@@ -66,27 +65,12 @@
 
 import navigation from "../components/Navigation.vue";
 import cards from "../components/Card.vue";
-import {mapState} from "vuex";
 
 export default {
   name: "Home",
   components: {
     navigation,
     cards
-  },
-  async created() {
-    try {
-    this.$store.dispatch('getWordpressPost');
-    this.$store.dispatch('getWPcards');
-    } catch(error){
-      console.log(error)
-    }
-  },
-  computed: {
-    ...mapState([
-      'posts',
-      'WPcards'
-    ]),
   },
 };
 </script>
