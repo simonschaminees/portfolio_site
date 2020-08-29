@@ -6,9 +6,12 @@
       </b-col>
     </b-row>
     <b-row class="lichtgrijs">
-      <b-col cols="5" offset-lg="1">
+      <b-col v-if="posts.length" cols="5" offset-lg="1">
         <h1 v-html="posts[0].content.rendered"></h1>
         <b-button class="primary-button">Mijn werk</b-button>
+      </b-col>
+        <b-col v-else cols="5" offset-lg="1">
+        <h1> content wordt ingeladen</h1>
       </b-col>
       <b-col cols="5">
         <img class="banner-image" alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
@@ -61,7 +64,6 @@
 </template>
 
 <script>
-
 import navigation from "../components/Navigation.vue";
 import cards from "../components/Card.vue";
 import { mapState} from 'vuex'
