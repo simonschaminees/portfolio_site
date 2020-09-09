@@ -6,9 +6,10 @@
       </b-col>
     </b-row>
     <b-row class="lichtgrijs">
-      <b-col v-if="posts.length" cols="5" offset-lg="1">
-        <h1 v-html="posts[0].content.rendered"></h1>
-        <b-button class="primary-button">Mijn werk</b-button>
+      <b-col v-if="posts.length" cols="5" offset-lg="1" class="d-flex flex-column align-self-center">
+        <h1 class="mainTitle " v-html="posts[0].title.rendered"></h1>
+        <p class="payOff" v-html="posts[0].content.rendered"></p>
+          <b-button href="" class="mt-5 primary-button">Mijn werk</b-button>
       </b-col>
         <b-col v-else cols="5" offset-lg="1">
         <h1> content wordt ingeladen</h1>
@@ -17,9 +18,9 @@
         <img class="banner-image" alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
       </b-col> 
     </b-row>
-
+  <b-col offset-lg="1">
     <cards />
-
+  </b-col>
 
     <b-row class="layout-margin">
       <b-col cols="10" offset-lg="1">
@@ -48,7 +49,7 @@
         <p class="payOff">
          Wilt u met mij in contact komen? Druk op de onderstaande knop
         </p>
-        <b-button class="primary-button">Contact</b-button>
+        <b-button class="primary-button mt-5">Contact</b-button>
       </b-col>
     </b-row>
 

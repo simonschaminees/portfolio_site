@@ -1,10 +1,14 @@
 <template>
-<b-container class="card-container-top" fluid>
-  <b-row v-for="cardsData in cardsData" :key="cardsData.id">
+<b-container fluid class="no-padding">
+  <b-row class="layout-margin" v-for="cardsData in cardsData" :key="cardsData.id">
+    <b-col class="no-padding" cols="2">
     <b-card-title v-html="cardsData.title.rendered">
     </b-card-title>
-    <b-card-text v-html="cardsData.content.rendered">
+    </b-col>
+    <b-col>
+    <b-card-text class="no-padding"  cols="5" v-html="cardsData.content.rendered">
     </b-card-text>
+    </b-col>
   </b-row>
 </b-container>
 
