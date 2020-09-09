@@ -10,10 +10,8 @@
       <b-col cols="5" offset-lg="1">
         <h1 class="mainTitle">Aliquam nec </h1>
         <p class="payOff white-font">
-          De verlosser,
-          De oppergeneraal
-          De redder van dx2
-          De wcm goeroe, Eerlijkheid boven alles.
+        Lorem ipsum
+        etc etc etc
         </p>
       </b-col>
     </b-row>

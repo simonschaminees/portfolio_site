@@ -13,7 +13,7 @@
         <b-col v-else cols="5" offset-lg="1">
         <h1> content wordt ingeladen</h1>
       </b-col>
-      <b-col cols="5">
+      <b-col class="d-none d-md-block" cols="5">
         <img class="banner-image" alt="Simon" src="../assets/images/PV-SimonSchaminee-transperant.png" />
       </b-col> 
     </b-row>
@@ -21,7 +21,7 @@
     <cards />
 
 
-    <b-row>
+    <b-row class="layout-margin">
       <b-col cols="10" offset-lg="1">
         <h2 class="headers">Portfolio</h2>
       </b-col>
@@ -43,13 +43,10 @@
       </b-col>
     </b-row>
 
-    <b-row class="lichtgrijs mt-4 pb-4">
-      <b-col cols="5" offset-lg="1">
+    <b-row class="lichtgrijs ">
+      <b-col cols="5" offset-lg="1" class="layout-margin"> 
         <p class="payOff">
-          De verlosser,
-          De oppergeneraal
-          De redder van dx2
-          De wcm goeroe, Eerlijkheid boven alles.
+         Wilt u met mij in contact komen? Druk op de onderstaande knop
         </p>
         <b-button class="primary-button">Contact</b-button>
       </b-col>

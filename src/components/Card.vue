@@ -1,17 +1,12 @@
 <template>
 <b-container class="card-container-top" fluid>
-
-<b-row  v-for="cardsData in cardsData" :key="cardsData.id" >
-       <b-col cols="1" offset-lg="1">
-      <b-card-title v-html="cardsData.title.rendered">    
-          </b-card-title>
-       </b-col >
-          <b-col cols="4" offset-lg="1">
-          <b-card-text v-html="cardsData.content.rendered">
-          </b-card-text>
-          </b-col>  
-</b-row>  
-</b-container>   
+  <b-row v-for="cardsData in cardsData" :key="cardsData.id">
+    <b-card-title v-html="cardsData.title.rendered">
+    </b-card-title>
+    <b-card-text v-html="cardsData.content.rendered">
+    </b-card-text>
+  </b-row>
+</b-container>
 
 </template>
 
