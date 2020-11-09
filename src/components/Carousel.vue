@@ -1,43 +1,33 @@
 <template>
-  <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <!-- Text slides with image -->
-      <b-carousel-slide
-        img-src="../assets/images/PV-SimonSchaminee-26.png"
-      ></b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="../assets/images/PV-SimonSchaminee-21.png"></b-carousel-slide>
-    </b-carousel>
-  </div>
+  <swiper
+    :slides-per-view="3"
+    :space-between="50"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+  >
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    ...
+  </swiper>
 </template>
-
 <script>
-/* eslint-disable no-unused-vars */
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
 
+  // Import Swiper styles
   export default {
-    data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
+    components: {
+      Swiper,
+      SwiperSlide,
     },
     methods: {
-      onSlideStart(slide) {
-        this.sliding = true
+      onSwiper(swiper) {
+        console.log(swiper)
       },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
-    }
-  }
+      onSlideChange() {
+        console.log('slide change')
+      },
+    },
+  };
 </script>
