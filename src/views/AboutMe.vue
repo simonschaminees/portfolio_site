@@ -17,7 +17,7 @@
     </b-row>
 
     <b-row>
-            <b-col cols="5" offset-lg="1">
+            <b-col cols="10" offset-lg="1">
         <carousel />
             </b-col>
     </b-row>

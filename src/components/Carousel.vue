@@ -1,35 +1,50 @@
 <template>
-  <swiper ref="mySwiper" :options="swiperOptions">
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
+  <swiper class="swiper" :options="swiperOption">
+        <swiper-slide><img src="../assets/images/PV-SimonSchaminee-25-resize.png">Slide 1</swiper-slide>
+    <swiper-slide><img src="../assets/images/PV-SimonSchaminee-21.png">Slide 2</swiper-slide>
+    <swiper-slide><img src="../assets/images/PV-SimonSchaminee-26.png">Slide 3</swiper-slide>
+            <swiper-slide><img src="../assets/images/PV-SimonSchaminee-25-resize.png">Slide 4</swiper-slide>
+
+
+
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
 
 <script>
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
   export default {
-    name: 'carrousel',
+    name: 'swiper-example-multiple-slides-per-biew',
+    title: 'Multiple slides per view',
+    components: {
+      Swiper,
+      SwiperSlide
+    },
     data() {
       return {
-        swiperOptions: {
-          pagination: {
-            el: '.swiper-pagination'
+        swiperOption: {
+          slidesPerView: 1.5,
+          spaceBetween: 80,
+          loop: true,
+          autoplay: {
+          delay: 2000,
           },
-          // Some Swiper option/callback...
+          loopFillGroupWithBlank: false,
+          loopAdditionalSlides: 900,
+
         }
       }
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
-    },
-    mounted() {
-      console.log('Current Swiper instance object', this.swiper)
-      this.swiper.slideTo(3, 1000, false)
     }
   }
 </script>
+
+<style lang="scss" scoped>
+.swiper {
+
+
+  .swiper-slide {
+    flex-shrink: 1;
+  }
+}
+</style>

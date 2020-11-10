@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import '../src/scss/main.scss';
-import 'swiper/swiper-bundle.css'
+import 'swiper/css/swiper.css'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
